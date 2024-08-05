@@ -9,6 +9,7 @@ readme = "README.md"
 python = "^3.12"
 fastapi = "^0.111.1"
 uvicorn = {extras = ["standard"], version = "^0.30.3"}
+upstash-redis = "^1.1.0"
 
 [build-system]
 requires = ["poetry-core"]
