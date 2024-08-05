@@ -8,6 +8,7 @@ LinkedIn Profile Agent is a FastAPI-based application that allows users to searc
 - Search LinkedIn companies by URL
 - Health check endpoint
 - Docker support for development
+- OpenAPI schema generation for integration with custom GPTs
 
 ## Requirements
 
@@ -102,6 +103,20 @@ LinkedIn Profile Agent is a FastAPI-based application that allows users to searc
 - `UPSTASH_REDIS_REST_URL`: Upstash Redis REST URL.
 - `UPSTASH_REDIS_REST_TOKEN`: Upstash Redis REST token.
 - `PORT`: Port to run the application (default: 8000).
+
+## Use Cases
+
+### OpenAPI Schema and Custom GPT Integration
+
+Thanks to FastAPI's built-in support for OpenAPI, this application can generate an OpenAPI schema that can be used to integrate with custom GPTs. This allows you to create a Linkedin profile agent chatbot that users can interact with to fetch LinkedIn profile and company information.
+
+### Example Use Case
+
+You can create a custom GPT model that uses the OpenAPI schema of this application to add actions for searching LinkedIn profiles and companies. This can be used to build a chatbot that helps users find LinkedIn profiles and companies, providing a conversational interface for LinkedIn data.
+
+Try the custom GPT here: [LinkedIn Profile Agent](https://chatgpt.com/g/g-eEeZCLQ2M-in-profile-agent)
+
+> **Note**: If the custom GPT does not work, it may be due to the ProxyCurl API limit being reached. In that case, you can clone this repository and deploy the application to your own server with your own ProxyCurl API key and create a custom GPT model that integrates with your server.
 
 ## License
 
