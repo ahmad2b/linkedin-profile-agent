@@ -12,6 +12,10 @@ load_dotenv()
 app = FastAPI(
         title="LinkedIn Profile Agent",
         version="0.1.0",
+        servers=[
+            {"url": "http://localhost:8000", "description": "Local Development Server"},
+            {"url": "https://linkedin-profile-agent-e3a6e32ba353.herokuapp.com", "description": "Production Server"}
+        ]
     )
 
 class ProfileRequest(BaseModel):
