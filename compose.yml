@@ -1,0 +1,15 @@
+version: "0.1.0"
+name: linkedin-profile-agent
+services:
+  linkedin-profile-agent:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+
+volumes:
+  linkedin-profile-agent:
+    driver: local
